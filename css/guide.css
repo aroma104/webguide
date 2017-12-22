@@ -1,0 +1,15 @@
+nav {position:fixed;top:0;left:0;width:100%;border-bottom:1px solid #555;padding:10px 0;background:#fff;z-index: 99;}
+nav h1 {text-align:center;font-weight:bold;}
+
+.component .lnb {position:fixed;left:0;top:55px;width:250px;height:100%;border-right:1px solid #555;z-index:10;}
+.component .lnb a {display:block;height:60px;padding-left:20px;font-size:16px;color:#666;line-height:60px;text-decoration:none;border-bottom:1px solid #ddd;}
+.component .lnb .inner a.active {color:#fff;background-color:#d71826;font-weight:bold;}
+.component .lnb a:hover {color:#d71826;font-weight:bold;}
+.component .component-area {padding:20px;margin-left:250px;margin-top:55px;}
+.component .component-area .component-title {font-size:17px;font-weight:bold;margin:100px 0 5px;}
+.component .component-area .component-title:first-child {margin-top:0;}
+.component .component-area .component-desc {font-size: 14px;padding: 30px;border: 1px solid #666;border-radius: 5px;}
+.component hr {margin:10px 0;}
+.component h2 {font-size:16px;font-weight:bold;margin: 20px 0;color: #222;border-bottom: 1px solid #eaeaea;}
+.component h2 span{display: inline-block;margin-bottom: -1px;padding: 0 15px 0 5px;border-bottom: 3px solid #e44548;}
+
