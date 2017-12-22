@@ -28,7 +28,7 @@ $(document).ready(function () {
 
     //slider
     var bxslider = $('.slide_wrap').bxSlider({
-        // auto: true,
+        auto: true,
         speed:300,
         autoControls: true,
         stopAutoOnClick: true,
@@ -36,10 +36,11 @@ $(document).ready(function () {
         ariaHidden:true,
         useCSS:false,
         touchEnabled: false,
+        nextText : '다음',
+        prevText : '이전',
+        easing:'linear',
         onSliderLoad: function () {
             $('.bx-pager-item').each(function (index) {$(this).find('a').text(index + 1 + "번째 슬라이드 보기");});
-            $('.bx-prev').text("이전 버튼");
-            $('.bx-next').text("다음 버튼");
         }
     });
 
