@@ -58,7 +58,8 @@ table.board tbody td img {vertical-align:middle;}
 
 /* tab drag sorting */
 #sortWrap {padding:10px;}
-#sortWrap .draggable {margin: 10px;padding: 10px 0 10px 20px;background-color: #FFF;border: 1px solid #ddd;cursor: ns-resize;}
+#sortWrap .draggable {margin: 10px;padding: 10px 20px;background-color: #FFF;border: 1px solid #ddd;cursor: ns-resize; }
+#sortWrap .draggable:hover {border:1px solid #eee;}
 
 /* 3d_floor */
 .floor_3d {min-height:400px;}
