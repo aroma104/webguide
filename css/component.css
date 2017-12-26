@@ -1,12 +1,12 @@
-.btn {overflow:hidden;display:inline-block;text-align:center;vertical-align:top;letter-spacing:-0.25px;border-radius:5px;box-sizing:border-box;}
+.btn {overflow:hidden;display:inline-block;text-align:center;vertical-align:top;letter-spacing:-0.25px;border-radius:5px;box-sizing:border-box;-webkit-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;transition: all .2s ease-in-out;}
 .btn.small {height:28px;padding:0 10px;font-size:12px;line-height:28px;}
-.btn.regular {height:40px;padding:0 20px;font-size:15px;line-height:40px;border-radius:2px;}
-.btn.medium {height:40px;padding:0 25px;font-size:15px;line-height:40px;}
-.btn.large {height:46px;padding:10px 50px 0;font-size:18px;line-height:23px;border-radius:42px;}
+.btn.medium {height:40px;padding:0 25px;font-size:15px;line-height:42px;}
+.btn.large {height:46px;padding:10px 50px 0;font-size:18px;line-height:28px;border-radius:42px;}
 .btn.is-red {color:#fff;background-color:#d71826;}
 .btn.is-red:hover {background-color:#b50916;}
 .btn.is-lightgray {color:#fff;background-color:#484848;}
 .btn.outline-lightgray {color:#666;border-color:#bbb;}
+.btn.outline-lightgray:hover {border-color:#ccc;}
 .btn.is-navygray {color:#fff;background-color:#333;}
 .btn.is-navygray:hover{background-color:#000;}
 .btn.outline-navygray {color:#222;border-color:#333;}
@@ -14,7 +14,7 @@
 [class*="btn circle"] {background-color:#fff;}
 [class*="btn circle"]:hover {background-color:#ebebeb;}
 [class*="outline-"] {border-width:2px;border-style:solid;}
-[class*="small outline-"] {border-width:1px;line-height:26px !important;}
+[class*="small outline-"] {border-width:1px;line-height:28px !important;}
 [class*="medium outline-"] {line-height:36px !important;}
 [class*="large outline-"] {line-height:18px !important;}
 [class*="medium outline-"]:hover,
@@ -58,7 +58,7 @@ table.board tbody td img {vertical-align:middle;}
 
 /* tab drag sorting */
 #sortWrap {padding:10px;}
-#sortWrap div {margin: 10px;padding: 10px 0 10px 20px;background-color: #FFF;border: 1px solid #ddd;cursor: ns-resize;}
+#sortWrap .draggable {margin: 10px;padding: 10px 0 10px 20px;background-color: #FFF;border: 1px solid #ddd;cursor: ns-resize;}
 
 /* 3d_floor */
 .floor_3d {min-height:400px;}
@@ -80,3 +80,11 @@ table.board tbody td img {vertical-align:middle;}
 .bx-controls .bx-pager .bx-pager-item {display: inline-block;padding-top: 20px;}
 .bx-controls .bx-pager .bx-pager-item a{display: inline-block;width: 10px;height: 10px;margin: 0 3px;border-radius: 50%;text-indent: -9999px;background: #000;}
 .bx-controls .bx-pager .bx-pager-item a.active {background:#d71826}
+
+/* card_wrap */
+.card_wrap:after {display: block;content: "";clear: both;}
+.card_wrap .card_item { position: relative;float:left;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;background-color: #fff;border: 1px solid rgba(0,0,0,.125);border-radius: .25rem;margin:0 15px 15px;}
+.card_wrap .card-img-top {display:block;width: 100%;}
+.card_wrap .card-block {-webkit-box-flex: 1;-webkit-flex: 1 1 auto;-ms-flex: 1 1 auto;flex: 1 1 auto;padding: 1.25rem;}
+.card_wrap .card-title {margin-bottom:15px;}
+.card_wrap .card-text {margin-bottom:10px;}

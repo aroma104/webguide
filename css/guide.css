@@ -8,8 +8,22 @@ nav h1 {text-align:center;font-weight:bold;}
 .component .component-area {padding:20px;margin-left:250px;margin-top:55px;}
 .component .component-area .component-title {font-size:17px;font-weight:bold;margin:100px 0 5px;}
 .component .component-area .component-title:first-child {margin-top:0;}
-.component .component-area .component-desc {font-size: 14px;padding: 30px;border: 1px solid #666;border-radius: 5px;}
+.component .component-area .component-desc {font-size: 14px;padding: 30px;border: 1px solid #666;border-radius: 5px;-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.component .component-area .component-desc.zoomIn {-webkit-animation-name:zoomIn;animation-name:zoomIn;}
 .component hr {margin:10px 0;}
 .component h2 {font-size:16px;font-weight:bold;margin: 20px 0;color: #222;border-bottom: 1px solid #eaeaea;}
 .component h2 span{display: inline-block;margin-bottom: -1px;padding: 0 15px 0 5px;border-bottom: 3px solid #e44548;}
 
+
+@keyframes zoomIn {
+    0%{
+        opacity:0;
+        -webkit-transform:scale3d(.3,.3,.3);
+        transform:scale3d(.3,.3,.3);
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}

@@ -32,12 +32,13 @@
             <a href="#ninth" class="">Div 순서 변경(드래그방식)</a>
             <a href="#tenth" class="">3D 적층</a>
             <a href="#eleventh" class="">Slide</a>
+            <a href="#Twelfth" class="">Card UI</a>
         </div>
     </div>
 
     <div class="component-area">
         <div id="first" class="component-title">개요</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
             지금 보시는 가이드는 KT AirMap 프로젝트 관련 웹스타일 가이드입니다.<br />
             웹사이트의 디자인 관리 및 신규 사이트 디자인 개발의 지침서로서 배포하여 활용하는 데 그 목적입니다.<br />
             Component css을 제공합니다.<br />
@@ -47,19 +48,19 @@
 
 
         <div id="second" class="component-title">웹 스타일 가이드 구축배경</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
             팀작업을 하는 퍼블리싱팀 편의를 위해 작성되었습니다.<br />
             기본 접근성은 준수하며, 선형화 구조의 마크업 입니다.
         </div>
 
 
         <div id="third" class="component-title">폰트 및 컬러</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
             폰트 및 컬러는 아직 정해져 있지 않습니다. 업데이트 예정입니다.
         </div>
 
         <div id="fourth" class="component-title">Form</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
 
             <h2><span>input</span></h2>
             <input type="text" title="label 없는 경우 타이틀 입력" placeholder="TEXT" value="" style="width:300px;">
@@ -104,7 +105,7 @@
 
 
         <div id="fifth" class="component-title">Button</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
 
             <h2><span>Button - Small</span></h2>
             <button type="button"><span class="btn small outline-lightgray">자세히보기</span></button>
@@ -125,7 +126,7 @@
 
 
         <div id="sixth" class="component-title">Table</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
 
             <h2><span>Table - 기본</span></h2>
             <table class="board">
@@ -199,7 +200,7 @@
 
 
         <div id="seventh" class="component-title">Accordion</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
 
             <h2><span>Accordion - 기본형</span></h2>
 
@@ -222,7 +223,7 @@
 
 
         <div id="eighth" class="component-title">페이징</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
 
             <h2><span>pagination - 기본형</span></h2>
             <div class="pagination">
@@ -247,22 +248,39 @@
         </div>
 
         <div id="ninth" class="component-title">Div 순서 변경(드래그)</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
 
             <h2><span>sortable</span></h2>
 
             <div id="sortWrap">
-                <div data-order=1>1</div>
-                <div data-order=2>2</div>
-                <div data-order=3>3</div>
-                <div data-order=4>4</div>
-                <div data-order=5>5</div>
+                <div class="draggable" data-order=1>
+                    1
+                    <ul class="accordions">
+                        <li>
+                            <a href="#card-accordions1-1" class="accordion-trigger"><strong>1. 재무제표 승인</strong></a>
+                            <div id="card-accordions1-1" class="accordion-contents">
+                                accordion-contents 1
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#card-accordions1-2" class="accordion-trigger"><strong>2. 배당결의</strong></a>
+                            <div id="card-accordions1-2" class="accordion-contents" style="">
+                                accordion-contents 2
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="draggable" data-order=2>2</div>
+                <div class="draggable" data-order=3>3</div>
+                <div class="draggable" data-order=4>4</div>
+                <div class="draggable" data-order=5>5</div>
             </div>
 
         </div>
 
         <div id="tenth" class="component-title">3D 적층</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
 
             <h2><span>3d floor</span></h2>
 
@@ -277,7 +295,7 @@
         </div>
 
         <div id="eleventh" class="component-title">Slide</div>
-        <div class="component-desc">
+        <div class="component-desc zoomIn">
 
             <h2><span>Slide</span></h2>
 
@@ -289,6 +307,36 @@
 
         </div>
 
+        <div id="Twelfth" class="component-title">Card</div>
+        <div class="component-desc zoomIn">
+
+            <h2><span>Card UI</span></h2>
+
+            <div class="card_wrap">
+
+                <div class="card_item">
+                    <img class="card-img-top" src="..." alt="Images">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button"><span class="btn medium is-red">자세히보기</span></button>
+                    </div>
+                </div>
+
+                <div class="card_item">
+                    <img class="card-img-top" src="..." alt="Images">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn medium is-navygray">자세히보기</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
     <!-- /component-area -->
     </div>
 
@@ -297,7 +345,17 @@
 <br />
 <br />
 
+<script>
+    $(document).ready(function () {
 
+
+        $('a').on('click',function (e) {
+            e.preventDefault();
+        })
+
+
+    })
+</script>
 
 </body>
 </html>
