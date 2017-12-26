@@ -83,7 +83,7 @@ table.board tbody td img {vertical-align:middle;}
 
 /* card_wrap */
 .card_wrap:after {display: block;content: "";clear: both;}
-.card_wrap .card_item { position: relative;float:left;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;background-color: #fff;border: 1px solid rgba(0,0,0,.125);border-radius: .25rem;margin:0 15px 15px;}
+.card_wrap .card_item { position: relative;float:left;width: 50%;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;background-color: #fff;border: 1px solid rgba(0,0,0,.125);border-radius: .25rem;padding:0 15px 15px;box-sizing: border-box;}
 .card_wrap .card-img-top {display:block;width: 100%;}
 .card_wrap .card-block {-webkit-box-flex: 1;-webkit-flex: 1 1 auto;-ms-flex: 1 1 auto;flex: 1 1 auto;padding: 1.25rem;}
 .card_wrap .card-title {margin-bottom:15px;}
