@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    $('a[href*="#"]').on('click',function (e) {
+        e.preventDefault();
+    });
+
     $('.lnb a').click(function(e) {
         e.preventDefault();
         $('html,body').animate({scrollTop:$(this.hash).offset().top}, 400);
@@ -24,6 +28,95 @@ $(document).ready(function () {
             });
             console.log(order);
         }
+    });
+
+    $('.tab-toggle ul.tabs li').click(function() {
+        var activeTab = $(this).attr('toggle');
+        $('.tab-toggle ul.tabs li').removeClass('current');
+        $('.tab-contents').removeClass('active');
+        $(this).addClass('current');
+        $('#' + activeTab).addClass('active');
+    });
+
+    var sideClick = function (target) {
+        var theCurrent;
+
+        $('.prev-next a', target).on('click', function (e) {
+            theCurrent = $(target).find('li.current');
+
+            if ($(this).hasClass('prev') && theCurrent.index() != 0) {
+                theCurrent.prev().find('a')[0].click();
+            } else if ($(this).hasClass('next') && theCurrent.index() != $(target).find('li').length - 1) {
+                theCurrent.next().find('a')[0].click();
+            }
+
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    };
+
+    var autoSlide = function (target) {
+        var slideUl = $(target).find('ul');
+        var slideList = slideUl.find('li');
+        var slideWidth = 0;
+        var listWidth = [];
+        var theScroll;
+        var theIndex;
+
+        var theCurrent = slideUl.find('li.current');
+        theCurrent.removeClass('current');
+
+        // 각각의 li 길이 구하기
+        for (var i = 0; i < slideList.length; i++) {
+            slideList.eq(i).width(slideList.eq(i).width());
+
+            listWidth[i] = Math.round(slideList.eq(i).width());
+            slideWidth += listWidth[i];
+        }
+
+        theCurrent.addClass('current');
+
+        // 총길이 지정
+        slideUl.width(slideWidth);
+
+        // auto-slide
+        $('ul li a', target).on('click', function (e) {
+
+            $(this).closest('ul').find('li.current').removeClass('current');
+            $(this).parent('li').addClass('current');
+
+            theScroll = 0;
+            theIndex = $(this).parent('li').index();
+
+            for (var k = 0; k < theIndex; k++) {
+                theScroll += listWidth[k];
+            }
+
+            $(target).find('.tabs-ui').animate({scrollLeft: theScroll - 320}, 200);
+
+            if (!$(this).hasClass('link')) e.preventDefault();
+        });
+
+        $(target).find('li.current a').trigger('click');
+    };
+
+    var tabsUiAutoWidth = function () {
+        var tabsUi = $('.tabmenu').width();
+        var tabsUiCal = ( tabsUi - $('.prev-next a').width() * 2 ) - 2;
+        $('.tabs-ui').css('width', tabsUiCal);
+    };
+
+    $('.tabmenu').each(function (index, elem) {
+        sideClick(elem);
+        autoSlide(elem);
+        tabsUiAutoWidth(elem);
+    });
+
+    //반응형 사이즈 재정의
+    $(window).resize(function (elem) {
+        sideClick(elem);
+        autoSlide(elem);
+        tabsUiAutoWidth(elem);
     });
 
     //slider

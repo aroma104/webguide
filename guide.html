@@ -34,7 +34,8 @@
             <a href="#tenth" class="">3D 적층</a>
             <a href="#eleventh" class="">Slide</a>
             <a href="#Twelfth" class="">Card UI</a>
-            <a href="#Thirth" class="">Circle</a>
+            <a href="#Thirteenth" class="">Circle</a>
+            <a href="#Fourteenth" class="">MenuTab</a>
         </div>
     </div>
 
@@ -63,6 +64,44 @@
 
         <div id="fourth" class="component-title">Form</div>
         <div class="component-desc zoomIn">
+
+            <h2><span>MenuTab</span></h2>
+            <div class="tab-toggle">
+                <ul class="tabs">
+                    <li toggle="tab1" class="current"><a href="#">1</a></li>
+                    <li toggle="tab2"><a href="#">2</a></li>
+                    <li toggle="tab3"><a href="#">3</a></li>
+                    <li toggle="tab4"><a href="#">4</a></li>
+                </ul>
+                <div id="tab1" class="tab-contents active">tab-contents1</div>
+                <div id="tab2" class="tab-contents">tab-contents2</div>
+                <div id="tab3" class="tab-contents">tab-contents3</div>
+                <div id="tab4" class="tab-contents">tab-contents4</div>
+            </div>
+
+
+            <h2><span>MenuTab - Move</span></h2>
+            <div class="tabmenu">
+                <div class="tabs-ui">
+                    <ul>
+                        <li class="current"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                    </ul>
+                </div>
+                <div class="prev-next">
+                    <a href="#" class="prev">이전</a>
+                    <a href="#" class="next">다음</a>
+                </div>
+            </div>
+
 
             <h2><span>input</span></h2>
             <input type="text" title="label 없는 경우 타이틀 입력" placeholder="TEXT" value="" style="width:300px;">
@@ -337,7 +376,7 @@
             </div>
         </div>
 
-        <div id="Thirth" class="component-title">Circle</div>
+        <div id="Thirteenth" class="component-title">Circle</div>
         <div class="component-desc zoomIn">
 
             <h2><span>Circle</span></h2>
@@ -353,6 +392,9 @@
                 </div>
             </div>
         </div>
+
+
+
     <!-- /component-area -->
     </div>
 
@@ -360,18 +402,6 @@
 
 <br />
 <br />
-
-<script>
-    $(document).ready(function () {
-
-
-        $('a').on('click',function (e) {
-            e.preventDefault();
-        })
-
-
-    })
-</script>
 
 </body>
 </html>

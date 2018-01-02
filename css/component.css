@@ -89,3 +89,22 @@ table.board tbody td img {vertical-align:middle;}
 .card_wrap .card-block {-webkit-box-flex: 1;-webkit-flex: 1 1 auto;-ms-flex: 1 1 auto;flex: 1 1 auto;padding: 1.25rem;}
 .card_wrap .card-title {margin-bottom:15px;}
 .card_wrap .card-text {margin-bottom:10px;}
+
+/* tabmenu */
+.tabmenu {position:relative;}
+.tabmenu .tabs-ui {position:relative;overflow:hidden;}
+.tabmenu .tabs-ui ul {height:40px;overflow:hidden;}
+.tabmenu .tabs-ui ul li {float:left;width:200px;}
+.tabmenu .tabs-ui ul li a {display:block;height:40px;line-height:42px;font-size:15px;background:#7a7c8d;border-left:1px solid #6f7180;text-align:center;color:#fff;box-sizing:border-box;transition: all 0.3s;}
+.tabmenu .tabs-ui ul li.current a {background:#fff;color:#d71826;border:1px solid #d71826;font-weight:bold;}
+.tabmenu .prev-next a {position:absolute;top:0;right:0;display:block;width:40px;height:40px;line-height:40px;background:#6b6d7c;border-right:1px solid #7a7c8d;box-sizing:border-box;text-align:center;color:#fff;}
+.tabmenu .prev-next .prev {right:40px;}
+.tabmenu .prev-next .nect {right:0;}
+
+
+.tab-toggle .tabs {overflow:hidden;}
+.tab-toggle .tabs li {float:left;height:40px;}
+.tab-toggle .tabs li a {display:block;width:100%;height:40px;line-height:42px;color: #fff;text-align: center;font-size: 15px;transition: all 0.3s;background:#7a7c8d;border-left:1px solid #6f7180;box-sizing:border-box;padding:0 30px;}
+.tab-toggle .tabs li.current a {background: #fff;color: #d71826;border: 1px solid #d71826;font-weight: bold;}
+.tab-toggle .tab-contents {display:none;}
+.tab-toggle .tab-contents.active {display:block;}
