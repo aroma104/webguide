@@ -21,6 +21,33 @@ $(document).ready(function () {
         }
     });
 
+    //s : layer popup
+    function popupLayer(obj){
+
+        var self = $(obj);
+        var	target = $($(obj).attr("href"));
+
+        $('.dimed').addClass('active');
+        $('html').addClass('layer-open');
+
+        $('.layers[id*="popup-"]').hide();
+        target.attr("tabindex", "0").stop().fadeIn(500).focus();
+
+        target.find(".layer-close button").click(function(){
+            $('html').removeClass('layer-open');
+            $('.dimed').removeClass('active');
+            target.stop().hide();
+            self.focus();
+        });
+    }
+
+    $('a[href*="#popup-"]').on('click', function(e){
+        e.preventDefault();
+        popupLayer(this);
+    });
+    //e : layer popup
+
+    //card draggable
     $("#sortWrap").sortable({
         update: function () {
             var order = $(this).sortable('toArray', {
@@ -30,6 +57,7 @@ $(document).ready(function () {
         }
     });
 
+    //tabmenu - toggle
     $('.tab-toggle ul.tabs li').click(function() {
         var activeTab = $(this).attr('toggle');
         $('.tab-toggle ul.tabs li').removeClass('current');
@@ -38,6 +66,8 @@ $(document).ready(function () {
         $('#' + activeTab).addClass('active');
     });
 
+
+    //s : tabmenu - Move
     var sideClick = function (target) {
         var theCurrent;
 
@@ -118,6 +148,7 @@ $(document).ready(function () {
         autoSlide(elem);
         tabsUiAutoWidth(elem);
     });
+    //s : tabmenu - Move
 
     //slider
     var bxslider = $('.slide_wrap').bxSlider({
@@ -137,6 +168,7 @@ $(document).ready(function () {
         }
     });
 
+    //chart 관련
     var ctx = document.getElementById("cv1");
     var myChart = new Chart(ctx, {
         type: 'doughnut',

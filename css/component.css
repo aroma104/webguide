@@ -1,3 +1,5 @@
+.layer-open {overflow:hidden;}
+
 .btn {overflow:hidden;display:inline-block;text-align:center;vertical-align:top;letter-spacing:-0.25px;border-radius:5px;box-sizing:border-box;-webkit-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;transition: all .2s ease-in-out;}
 .btn.small {height:28px;padding:0 10px;font-size:12px;line-height:28px;}
 .btn.medium {height:40px;padding:0 25px;font-size:15px;line-height:42px;}
@@ -91,6 +93,13 @@ table.board tbody td img {vertical-align:middle;}
 .card_wrap .card-text {margin-bottom:10px;}
 
 /* tabmenu */
+.tab-toggle .tabs {overflow:hidden;}
+.tab-toggle .tabs li {float:left;height:40px;}
+.tab-toggle .tabs li a {display:block;width:100%;height:40px;line-height:42px;color: #fff;text-align: center;font-size: 15px;transition: all 0.3s;background:#7a7c8d;border-left:1px solid #6f7180;box-sizing:border-box;padding:0 30px;}
+.tab-toggle .tabs li.current a {background: #fff;color: #d71826;border: 1px solid #d71826;font-weight: bold;}
+.tab-toggle .tab-contents {display:none;}
+.tab-toggle .tab-contents.active {display:block;}
+
 .tabmenu {position:relative;}
 .tabmenu .tabs-ui {position:relative;overflow:hidden;}
 .tabmenu .tabs-ui ul {height:40px;overflow:hidden;}
@@ -101,10 +110,10 @@ table.board tbody td img {vertical-align:middle;}
 .tabmenu .prev-next .prev {right:40px;}
 .tabmenu .prev-next .nect {right:0;}
 
-
-.tab-toggle .tabs {overflow:hidden;}
-.tab-toggle .tabs li {float:left;height:40px;}
-.tab-toggle .tabs li a {display:block;width:100%;height:40px;line-height:42px;color: #fff;text-align: center;font-size: 15px;transition: all 0.3s;background:#7a7c8d;border-left:1px solid #6f7180;box-sizing:border-box;padding:0 30px;}
-.tab-toggle .tabs li.current a {background: #fff;color: #d71826;border: 1px solid #d71826;font-weight: bold;}
-.tab-toggle .tab-contents {display:none;}
-.tab-toggle .tab-contents.active {display:block;}
+/* layer-popup */
+.dimed {display:none;position: fixed;top: 0;left: 0;bottom:0;right:0;width: 100%;height: 100%;z-index:10;background:rgba(0,0,0,0.5);}
+.dimed.active, .layers.active {display:block;}
+.layers {display:none;position:fixed;top:50%;left:50%;min-width:200px;margin:0 auto;transform:translate(-50%, -50%);border:2px solid #555;background:#fff;z-index:11;}
+.layers .layer-close {position:absolute;right:30px;top:30px;z-index:11;}
+.layers .layer-header {height:85px;font-size:20px;line-height:85px;color:#222;text-align:center;border-bottom:1px solid #ccc;}
+.layers .layer-contents {min-height:100px;padding:30px;}
