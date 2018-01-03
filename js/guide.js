@@ -33,7 +33,7 @@ $(document).ready(function () {
         $('.layers[id*="popup-"]').hide();
         target.attr("tabindex", "0").stop().fadeIn(500).focus();
 
-        target.find(".layer-close button").click(function(){
+        $(".layer-close button, .dimed.active").click(function(){
             $('html').removeClass('layer-open');
             $('.dimed').removeClass('active');
             target.stop().hide();
